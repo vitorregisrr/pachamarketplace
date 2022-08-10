@@ -1,5 +1,5 @@
 {
-  "name": "pachamarketplace",
+  "name": "wongames",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -23,11 +23,13 @@
     ]
   },
   "dependencies": {
+    "@storybook/addon-knobs": "^6.4.0",
     "next": "11.0.1",
     "next-pwa": "^5.2.23",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "5.3.0"
+    "styled-components": "5.3.0",
+    "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
