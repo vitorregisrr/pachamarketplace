@@ -1,5 +1,5 @@
 {
-  "name": "pachamarketplace",
+  "name": "wongames",
   "version": "1.0.0",
   "private": true,
   "scripts": {
@@ -23,11 +23,13 @@
     ]
   },
   "dependencies": {
+    "@storybook/addon-knobs": "^6.4.0",
     "next": "11.0.1",
     "next-pwa": "^5.2.23",
     "react": "17.0.2",
     "react-dom": "17.0.2",
-    "styled-components": "5.3.0"
+    "styled-components": "5.3.0",
+    "styled-media-query": "^2.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.14.6",
@@ -37,7 +39,7 @@
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
     "@types/jest": "^26.0.24",
-    "@types/node": "^16.3.2",
+    "@types/node": "^18.7.1",
     "@types/react": "^17.0.14",
     "@types/styled-components": "^5.1.11",
     "@typescript-eslint/eslint-plugin": "^4.28.3",
