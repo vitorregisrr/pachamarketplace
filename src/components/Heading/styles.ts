@@ -3,12 +3,17 @@ import media from 'styled-media-query'
 
 import { HeadingProps, LineColors } from '.'
 
-const wrapperModifiers = {
+export const wrapperModifiers = {
   small: (theme: DefaultTheme) => css`
     font-size: ${theme.font.sizes.medium};
     &::after {
       width: 3rem;
     }
+  `,
+
+  huge: (theme: DefaultTheme) => css`
+    font-size: ${theme.font.sizes.huge};
+    line-height: 1.2;
   `,
 
   medium: (theme: DefaultTheme) => css`

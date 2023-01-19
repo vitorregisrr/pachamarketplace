@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 import { useState } from 'react'
 import { Menu2 as MenuIcon } from '@styled-icons/remix-fill/Menu2'
 import { ShoppingCart as ShoppingCartIcon } from '@styled-icons/material-outlined/ShoppingCart'
@@ -6,9 +8,8 @@ import { Close as CloseIcon } from '@styled-icons/material-outlined/Close'
 
 import Button from 'components/Button'
 import Logo from 'components/Logo'
-
-import * as S from './styles'
 import MediaMatch from 'components/MediaMatch'
+import * as S from './styles'
 
 export type MenuProps = {
   username?: string
@@ -41,12 +42,13 @@ const Menu = ({ username }: MenuProps) => {
           <SearchIcon aria-label="Search" />
         </S.IconWrapper>
         <S.IconWrapper>
-          <ShoppingCartIcon aria-label="Open shopping cart" />
+          <ShoppingCartIcon aria-label="Open Shopping Cart" />
         </S.IconWrapper>
-
         {!username && (
           <MediaMatch greaterThan="medium">
-            <Button>Sign in</Button>
+            <Link href="/sign-in" passHref>
+              <Button as="a">Sign in</Button>
+            </Link>
           </MediaMatch>
         )}
       </S.MenuGroup>
@@ -56,23 +58,26 @@ const Menu = ({ username }: MenuProps) => {
         <S.MenuNav>
           <S.MenuLink href="#">Home</S.MenuLink>
           <S.MenuLink href="#">Explore</S.MenuLink>
+
           {!!username && (
             <>
-              <S.MenuLink href="#">My Account</S.MenuLink>
-              <S.MenuLink href="#">Wish List</S.MenuLink>
+              <S.MenuLink href="#">My account</S.MenuLink>
+              <S.MenuLink href="#">Wishlist</S.MenuLink>
             </>
           )}
         </S.MenuNav>
 
         {!username && (
           <S.RegisterBox>
-            <Button fullWidth size="large">
-              Log in now
-            </Button>
+            <Link href="/sign-in" passHref>
+              <Button fullWidth size="large" as="a">
+                Sign in
+              </Button>
+            </Link>
             <span>or</span>
-            <S.CreateAccount href="#" title="Sign Up">
-              Sign Up
-            </S.CreateAccount>
+            <Link href="/sign-up" passHref>
+              <S.CreateAccount title="Sign Up">Sign Up</S.CreateAccount>
+            </Link>
           </S.RegisterBox>
         )}
       </S.MenuFull>
